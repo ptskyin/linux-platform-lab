@@ -1,0 +1,23 @@
+5dbc9a7ed000-5dbc9a7ee000 r--p 00000000 08:05 3561489                    /home/skyin/workspaces/linux/linux-platform-lab/02-system-programming-labs/week02-process-memory/fork_exec_demo
+5dbc9a7ee000-5dbc9a7ef000 r-xp 00001000 08:05 3561489                    /home/skyin/workspaces/linux/linux-platform-lab/02-system-programming-labs/week02-process-memory/fork_exec_demo
+5dbc9a7ef000-5dbc9a7f0000 r--p 00002000 08:05 3561489                    /home/skyin/workspaces/linux/linux-platform-lab/02-system-programming-labs/week02-process-memory/fork_exec_demo
+5dbc9a7f0000-5dbc9a7f1000 r--p 00002000 08:05 3561489                    /home/skyin/workspaces/linux/linux-platform-lab/02-system-programming-labs/week02-process-memory/fork_exec_demo
+5dbc9a7f1000-5dbc9a7f2000 rw-p 00003000 08:05 3561489                    /home/skyin/workspaces/linux/linux-platform-lab/02-system-programming-labs/week02-process-memory/fork_exec_demo
+7c686d000000-7c686d028000 r--p 00000000 08:05 7875866                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7c686d028000-7c686d1b0000 r-xp 00028000 08:05 7875866                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7c686d1b0000-7c686d1ff000 r--p 001b0000 08:05 7875866                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7c686d1ff000-7c686d203000 r--p 001fe000 08:05 7875866                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7c686d203000-7c686d205000 rw-p 00202000 08:05 7875866                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7c686d205000-7c686d212000 rw-p 00000000 00:00 0 
+7c686d295000-7c686d298000 rw-p 00000000 00:00 0 
+7c686d2a6000-7c686d2a8000 rw-p 00000000 00:00 0 
+7c686d2a8000-7c686d2ac000 r--p 00000000 00:00 0                          [vvar]
+7c686d2ac000-7c686d2ae000 r--p 00000000 00:00 0                          [vvar_vclock]
+7c686d2ae000-7c686d2b0000 r-xp 00000000 00:00 0                          [vdso]
+7c686d2b0000-7c686d2b1000 r--p 00000000 08:05 7875668                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c686d2b1000-7c686d2dc000 r-xp 00001000 08:05 7875668                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c686d2dc000-7c686d2e6000 r--p 0002c000 08:05 7875668                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c686d2e6000-7c686d2e8000 r--p 00036000 08:05 7875668                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7c686d2e8000-7c686d2ea000 rw-p 00038000 08:05 7875668                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffdf0c35000-7ffdf0c56000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]

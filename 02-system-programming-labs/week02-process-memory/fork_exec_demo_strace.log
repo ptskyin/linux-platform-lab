@@ -1,0 +1,212 @@
+execve("./fork_exec_demo", ["./fork_exec_demo"], 0x7ffc8286d048 /* 43 vars */) = 0
+brk(NULL)                               = 0x64aec2d4c000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x757f57d78000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=56339, ...}) = 0
+mmap(NULL, 56339, PROT_READ, MAP_PRIVATE, 3, 0) = 0x757f57d6a000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+fstat(3, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x757f57a00000
+mmap(0x757f57a28000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x757f57a28000
+mmap(0x757f57bb0000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000) = 0x757f57bb0000
+mmap(0x757f57bff000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000) = 0x757f57bff000
+mmap(0x757f57c05000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x757f57c05000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x757f57d67000
+arch_prctl(ARCH_SET_FS, 0x757f57d67740) = 0
+set_tid_address(0x757f57d67a10)         = 58157
+set_robust_list(0x757f57d67a20, 24)     = 0
+rseq(0x757f57d68060, 0x20, 0, 0x53053053) = 0
+mprotect(0x757f57bff000, 16384, PROT_READ) = 0
+mprotect(0x64ae9b759000, 4096, PROT_READ) = 0
+mprotect(0x757f57db8000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x757f57d6a000, 56339)           = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLDstrace: Process 58158 attached
+, child_tidptr=0x757f57d67a10) = 58158
+[pid 58158] set_robust_list(0x757f57d67a20, 24 <unfinished ...>
+[pid 58157] wait4(58158,  <unfinished ...>
+[pid 58158] <... set_robust_list resumed>) = 0
+[pid 58158] execve("/home/skyin/.nvm/versions/node/v24.14.1/bin/ls", ["ls", "-l"], 0x7ffc874a1538 /* 43 vars */) = -1 ENOENT (No such file or directory)
+[pid 58158] execve("/home/skyin/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/ls", ["ls", "-l"], 0x7ffc874a1538 /* 43 vars */) = -1 ENOENT (No such file or directory)
+[pid 58158] execve("/home/skyin/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli/ls", ["ls", "-l"], 0x7ffc874a1538 /* 43 vars */) = -1 ENOENT (No such file or directory)
+[pid 58158] execve("/home/skyin/.vscode-server/cli/servers/Stable-0958016b2af9f09bb4257e0df4a95e2f90590f9f/server/bin/remote-cli/ls", ["ls", "-l"], 0x7ffc874a1538 /* 43 vars */) = -1 ENOENT (No such file or directory)
+[pid 58158] execve("/usr/local/sbin/ls", ["ls", "-l"], 0x7ffc874a1538 /* 43 vars */) = -1 ENOENT (No such file or directory)
+[pid 58158] execve("/usr/local/bin/ls", ["ls", "-l"], 0x7ffc874a1538 /* 43 vars */) = -1 ENOENT (No such file or directory)
+[pid 58158] execve("/usr/sbin/ls", ["ls", "-l"], 0x7ffc874a1538 /* 43 vars */) = -1 ENOENT (No such file or directory)
+[pid 58158] execve("/usr/bin/ls", ["ls", "-l"], 0x7ffc874a1538 /* 43 vars */) = 0
+[pid 58158] brk(NULL)                   = 0x5a37e64cb000
+[pid 58158] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b1fb3113000
+[pid 58158] access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+[pid 58158] fstat(3, {st_mode=S_IFREG|0644, st_size=56339, ...}) = 0
+[pid 58158] mmap(NULL, 56339, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7b1fb3105000
+[pid 58158] close(3)                    = 0
+[pid 58158] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+[pid 58158] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid 58158] fstat(3, {st_mode=S_IFREG|0644, st_size=174472, ...}) = 0
+[pid 58158] mmap(NULL, 181960, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b1fb30d8000
+[pid 58158] mmap(0x7b1fb30de000, 118784, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7b1fb30de000
+[pid 58158] mmap(0x7b1fb30fb000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x23000) = 0x7b1fb30fb000
+[pid 58158] mmap(0x7b1fb3101000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x29000) = 0x7b1fb3101000
+[pid 58158] mmap(0x7b1fb3103000, 5832, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7b1fb3103000
+[pid 58158] close(3)                    = 0
+[pid 58158] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid 58158] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+[pid 58158] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 58158] fstat(3, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+[pid 58158] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+[pid 58158] mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b1fb2e00000
+[pid 58158] mmap(0x7b1fb2e28000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7b1fb2e28000
+[pid 58158] mmap(0x7b1fb2fb0000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000) = 0x7b1fb2fb0000
+[pid 58158] mmap(0x7b1fb2fff000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000) = 0x7b1fb2fff000
+[pid 58158] mmap(0x7b1fb3005000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7b1fb3005000
+[pid 58158] close(3)                    = 0
+[pid 58158] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+[pid 58158] read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+[pid 58158] fstat(3, {st_mode=S_IFREG|0644, st_size=625344, ...}) = 0
+[pid 58158] mmap(NULL, 627472, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b1fb303e000
+[pid 58158] mmap(0x7b1fb3040000, 450560, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7b1fb3040000
+[pid 58158] mmap(0x7b1fb30ae000, 163840, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x70000) = 0x7b1fb30ae000
+[pid 58158] mmap(0x7b1fb30d6000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x97000) = 0x7b1fb30d6000
+[pid 58158] close(3)                    = 0
+[pid 58158] mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b1fb303b000
+[pid 58158] arch_prctl(ARCH_SET_FS, 0x7b1fb303b800) = 0
+[pid 58158] set_tid_address(0x7b1fb303bad0) = 58158
+[pid 58158] set_robust_list(0x7b1fb303bae0, 24) = 0
+[pid 58158] rseq(0x7b1fb303c120, 0x20, 0, 0x53053053) = 0
+[pid 58158] mprotect(0x7b1fb2fff000, 16384, PROT_READ) = 0
+[pid 58158] mprotect(0x7b1fb30d6000, 4096, PROT_READ) = 0
+[pid 58158] mprotect(0x7b1fb3101000, 4096, PROT_READ) = 0
+[pid 58158] mprotect(0x5a37bd8eb000, 8192, PROT_READ) = 0
+[pid 58158] mprotect(0x7b1fb3153000, 8192, PROT_READ) = 0
+[pid 58158] prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+[pid 58158] munmap(0x7b1fb3105000, 56339) = 0
+[pid 58158] statfs("/sys/fs/selinux", 0x7ffca3649f00) = -1 ENOENT (No such file or directory)
+[pid 58158] statfs("/selinux", 0x7ffca3649f00) = -1 ENOENT (No such file or directory)
+[pid 58158] getrandom("\x6c\x26\x5a\x5a\xf4\x4d\x5c\x50", 8, GRND_NONBLOCK) = 8
+[pid 58158] brk(NULL)                   = 0x5a37e64cb000
+[pid 58158] brk(0x5a37e64ec000)         = 0x5a37e64ec000
+[pid 58158] openat(AT_FDCWD, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+[pid 58158] fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+[pid 58158] read(3, "nodev\tsysfs\nnodev\ttmpfs\nnodev\tbd"..., 1024) = 393
+[pid 58158] read(3, "", 1024)           = 0
+[pid 58158] close(3)                    = 0
+[pid 58158] access("/etc/selinux/config", F_OK) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+[pid 58158] fstat(3, {st_mode=S_IFREG|0644, st_size=14596880, ...}) = 0
+[pid 58158] mmap(NULL, 14596880, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7b1fb2000000
+[pid 58158] close(3)                    = 0
+[pid 58158] ioctl(1, TCGETS, 0x7ffca3649da0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+[pid 58158] fstat(3, {st_mode=S_IFREG|0644, st_size=2996, ...}) = 0
+[pid 58158] read(3, "# Locale name alias data base.\n#"..., 4096) = 2996
+[pid 58158] read(3, "", 4096)           = 0
+[pid 58158] close(3)                    = 0
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/en_US.UTF-8/LC_TIME/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/en_US.utf8/LC_TIME/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/en_US/LC_TIME/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/en.UTF-8/LC_TIME/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/en.utf8/LC_TIME/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/en/LC_TIME/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3
+[pid 58158] fstat(3, {st_mode=S_IFREG|0644, st_size=27028, ...}) = 0
+[pid 58158] mmap(NULL, 27028, PROT_READ, MAP_SHARED, 3, 0) = 0x7b1fb310c000
+[pid 58158] close(3)                    = 0
+[pid 58158] futex(0x7b1fb300472c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+[pid 58158] openat(AT_FDCWD, ".", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+[pid 58158] fstat(3, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+[pid 58158] getdents64(3, 0x5a37e64d3ab0 /* 6 entries */, 32768) = 216
+[pid 58158] statx(AT_FDCWD, "fork_exec_demo.c", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0664, stx_size=948, ...}) = 0
+[pid 58158] lgetxattr("fork_exec_demo.c", "security.selinux", 0x5a37e64cd2c0, 255) = -1 ENODATA (No data available)
+[pid 58158] listxattr("fork_exec_demo.c", "", 152) = 0
+[pid 58158] socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+[pid 58158] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 58158] close(4)                    = 0
+[pid 58158] socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+[pid 58158] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 58158] close(4)                    = 0
+[pid 58158] newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=594, ...}, 0) = 0
+[pid 58158] newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+[pid 58158] openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 4
+[pid 58158] fstat(4, {st_mode=S_IFREG|0644, st_size=594, ...}) = 0
+[pid 58158] read(4, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 594
+[pid 58158] read(4, "", 4096)           = 0
+[pid 58158] fstat(4, {st_mode=S_IFREG|0644, st_size=594, ...}) = 0
+[pid 58158] close(4)                    = 0
+[pid 58158] openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 4
+[pid 58158] fstat(4, {st_mode=S_IFREG|0644, st_size=2957, ...}) = 0
+[pid 58158] lseek(4, 0, SEEK_SET)       = 0
+[pid 58158] read(4, "root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 2957
+[pid 58158] close(4)                    = 0
+[pid 58158] socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+[pid 58158] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 58158] close(4)                    = 0
+[pid 58158] socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+[pid 58158] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 58158] close(4)                    = 0
+[pid 58158] newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=594, ...}, 0) = 0
+[pid 58158] openat(AT_FDCWD, "/etc/group", O_RDONLY|O_CLOEXEC) = 4
+[pid 58158] fstat(4, {st_mode=S_IFREG|0644, st_size=1133, ...}) = 0
+[pid 58158] lseek(4, 0, SEEK_SET)       = 0
+[pid 58158] read(4, "root:x:0:\ndaemon:x:1:\nbin:x:2:\ns"..., 4096) = 1133
+[pid 58158] close(4)                    = 0
+[pid 58158] statx(AT_FDCWD, "fork_exec_demo_fail", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0775, stx_size=18064, ...}) = 0
+[pid 58158] lgetxattr("fork_exec_demo_fail", "security.selinux", 0x5a37e64dbf10, 255) = -1 ENODATA (No data available)
+[pid 58158] listxattr("fork_exec_demo_fail", "", 152) = 0
+[pid 58158] statx(AT_FDCWD, "fork_exec_demo_strace.log", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0664, stx_size=13757, ...}) = 0
+[pid 58158] lgetxattr("fork_exec_demo_strace.log", "security.selinux", 0x5a37e64dc040, 255) = -1 ENODATA (No data available)
+[pid 58158] listxattr("fork_exec_demo_strace.log", "", 152) = 0
+[pid 58158] statx(AT_FDCWD, "fork_exec_demo", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW|AT_NO_AUTOMOUNT, STATX_MODE|STATX_NLINK|STATX_UID|STATX_GID|STATX_MTIME|STATX_SIZE, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0775, stx_size=18064, ...}) = 0
+[pid 58158] lgetxattr("fork_exec_demo", "security.selinux", 0x5a37e64dc180, 255) = -1 ENODATA (No data available)
+[pid 58158] listxattr("fork_exec_demo", "", 152) = 0
+[pid 58158] getdents64(3, 0x5a37e64d3ab0 /* 0 entries */, 32768) = 0
+[pid 58158] close(3)                    = 0
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/en_US.UTF-8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/en_US.utf8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/en_US/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/en.UTF-8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/en.utf8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.UTF-8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.utf8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale-langpack/en_US/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale-langpack/en.UTF-8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale-langpack/en.utf8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid 58158] openat(AT_FDCWD, "/usr/share/locale-langpack/en/LC_MESSAGES/coreutils.mo", O_RDONLY) = 3
+[pid 58158] fstat(3, {st_mode=S_IFREG|0644, st_size=613, ...}) = 0
+[pid 58158] mmap(NULL, 613, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7b1fb310b000
+[pid 58158] close(3)                    = 0
+[pid 58158] fstat(1, {st_mode=S_IFREG|0664, st_size=16439, ...}) = 0
+[pid 58158] openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 3
+[pid 58158] fstat(3, {st_mode=S_IFREG|0644, st_size=415, ...}) = 0
+[pid 58158] fstat(3, {st_mode=S_IFREG|0644, st_size=415, ...}) = 0
+[pid 58158] read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\10\0\0\0\0"..., 4096) = 415
+[pid 58158] lseek(3, -230, SEEK_CUR)    = 185
+[pid 58158] read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0\0\10\0\0\0\0"..., 4096) = 230
+[pid 58158] close(3)                    = 0
+[pid 58158] write(1, "total 60\n-rwxrwxr-x 1 skyin skyi"..., 263total 60
+-rwxrwxr-x 1 skyin skyin 18064 May 17 17:33 fork_exec_demo
+-rw-rw-r-- 1 skyin skyin   948 May 17 17:32 fork_exec_demo.c
+-rwxrwxr-x 1 skyin skyin 18064 May 17 17:31 fork_exec_demo_fail
+-rw-rw-r-- 1 skyin skyin 13757 May 17 17:53 fork_exec_demo_strace.log
+) = 263
+[pid 58158] close(1)                    = 0
+[pid 58158] close(2)                    = 0
+[pid 58158] exit_group(0)               = ?
+[pid 58158] +++ exited with 0 +++
+<... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 58158
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=58158, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+fstat(1, {st_mode=S_IFREG|0664, st_size=17688, ...}) = 0
+getrandom("\x49\x94\x35\xc9\x1b\x20\x24\x0c", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x64aec2d4c000
+brk(0x64aec2d6d000)                     = 0x64aec2d6d000
+write(1, "Child exited with status 0\n", 27Child exited with status 0
+) = 27
+exit_group(0)                           = ?
++++ exited with 0 +++

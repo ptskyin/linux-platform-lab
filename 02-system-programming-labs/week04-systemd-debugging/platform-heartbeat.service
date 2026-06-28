@@ -1,0 +1,13 @@
+[Unit]
+Description=Platform Heartbeat Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/skyin/workspaces/linux/linux-platform-lab/02-system-programming-labs/week04-systemd-debugging/platform-heartbeat.sh
+Restart=always
+RestartSec=5s
+WorkingDirectory=/home/skyin/workspaces/linux/linux-platform-lab/02-system-programming-labs/week04-systemd-debugging
+
+[Install]
+WantedBy=multi-user.target
